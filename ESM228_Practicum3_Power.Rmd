@@ -26,7 +26,7 @@ library(dplyr)
 set.seed(101)
 population <- declare_population(
   sb_hotels = add_level(N=150, 
-    baseline_water = runif(n=N, min=80, max=500), #min and max values measured
+    baseline_water = runif(n=N, min=80, max=500), #min and max values measured in gallons per room per day
     annual_change_rate = rnorm(n=N, mean=1.02, sd=0.05)) #annual rate of change is 1.02 with sd of 0.05
 )
 pop <- population()
