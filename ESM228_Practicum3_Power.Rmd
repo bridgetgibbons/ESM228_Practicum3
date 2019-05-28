@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r packages, echo = TRUE, message = FALSE}
+```{r packages, echo = TRUE, message = FALSE, warning = FALSE}
 
 library(DeclareDesign)
 library(truncnorm)
