@@ -39,8 +39,8 @@ pop <- population()
 
 potential_outcomes <- 
   declare_potential_outcomes(
-    Y_Z_0 = baseline_water * annual_change_rate, 
-    Y_Z_1 = baseline_water * annual_change_rate * 0.97) 
+    Y_Z_0 = baseline_water * annual_change_rate, #control group, annual change rate from avobe
+    Y_Z_1 = baseline_water * annual_change_rate * 0.97) #program needs to achieve at least a 3% water reduction in order for us to measure it 
 po <- potential_outcomes(pop)
 ```
 
@@ -52,7 +52,7 @@ kable(po[1:5,], digits=2) #this is what the table will look like with this popul
 
 ```{r po-check, echo=TRUE}
 
-mean(po$baseline_water)
+mean(po$baseline_water) 
 
 sd(po$baseline_water)
 
